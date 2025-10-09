@@ -29,19 +29,29 @@ for (let i = 0; i < teachers.length; i++) {
 console.log(longNames);
 
 // 3. Rimuovi 'Ed' dall'array teachers
-const deleteEd = teachers.splice(1, 1)
+//const deleteEd = teachers.splice(1, 1)
+//console.log(teachers);
+
+for (let i = 0; i < teachers.length; i++) {
+  if (teachers[i] === 'Ed')
+    teachers.splice(i, 1)
+}
 console.log(teachers);
+
 
 
 // 4. Verifica se 'Fabio' è presente nell'array teachers
 // e salva il risultato nella variabile isFabioPresent
-const isFabioPresent = teachers.indexOf('Fabio');
-if (isFabioPresent > 0) {
-  const isFabioPresent = 'Present'
-  console.log(isFabioPresent);
-} else {
-  const isFabioPresent = 'absent'
-  console.log(isFabioPresent);
+for (let i = 0; i < teachers.length; i++) {
+  let rotation = teachers[i]
+  let isFabioPresent = rotation.includes(serarcElement = 'Fabio')
+
+
+  if (isFabioPresent === true) {
+    isFabioPresent = 'It present'
+    console.log(isFabioPresent);
+  }
+
 }
 
 
